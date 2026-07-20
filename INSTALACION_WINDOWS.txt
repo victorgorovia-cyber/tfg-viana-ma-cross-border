@@ -1,0 +1,91 @@
+=========================================================
+Sistema predictivo de éxito en operaciones de M&A
+TFG - Víctor Viana Atilano
+Instalación en Windows
+=========================================================
+
+REQUISITOS PREVIOS
+------------------
+1. Windows 10 u 11
+2. Python 3.10 o superior instalado
+   (descargar de https://www.python.org/downloads/
+    IMPORTANTE: marcar la casilla "Add Python to PATH"
+    durante la instalación)
+
+
+INSTRUCCIONES PASO A PASO
+=========================
+
+Paso 1 - Descomprimir el archivo
+--------------------------------
+Botón derecho sobre "TFG_M&A_sistema.zip" > Extraer todo
+Esto crea una carpeta con todos los archivos del sistema.
+
+
+Paso 2 - Abrir terminal en la carpeta
+-------------------------------------
+Dentro de la carpeta descomprimida:
+  · Manten pulsada la tecla SHIFT
+  · Haz clic derecho en un espacio vacío
+  · Selecciona "Abrir ventana de PowerShell aquí"
+    o "Abrir ventana de terminal aquí"
+
+
+Paso 3 - Instalar dependencias (solo la primera vez)
+----------------------------------------------------
+En la terminal, escribe:
+
+  pip install -r requirements.txt
+
+Esto descarga las librerías necesarias (streamlit, catboost, etc.).
+La primera vez tarda 2-3 minutos. Después ya no hace falta.
+
+
+Paso 4 - Arrancar la aplicación
+-------------------------------
+En la misma terminal, escribe:
+
+  streamlit run app.py
+
+Se abrirá automáticamente el navegador con la aplicación.
+Si no se abre solo, ve a:  http://localhost:8501
+
+
+CÓMO USAR LA APLICACIÓN
+=======================
+1. En la barra izquierda hay 5 modos disponibles.
+2. Empieza por "Evaluar deal (target elegido)".
+3. Dentro de ese modo hay un botón "Cargar caso del TFG"
+   que precarga automáticamente el caso Amadeus + Target
+   Tech Europa con contexto macro 2018.
+4. Pulsa "Evaluar" al final del formulario para obtener
+   probabilidad, valoración y veredicto integrado.
+
+
+CERRAR LA APLICACIÓN
+====================
+En la ventana de terminal donde arrancaste la aplicación,
+pulsa Ctrl + C.
+
+
+PROBLEMAS FRECUENTES
+====================
+
+- "python no se reconoce como comando":
+  Reinstalar Python marcando la casilla "Add to PATH".
+
+- "pip no se reconoce":
+  Escribir "python -m pip install -r requirements.txt".
+
+- Puerto 8501 ocupado:
+  Ejecutar con  streamlit run app.py --server.port 8502
+
+- Aviso de firewall al arrancar:
+  Aceptar el acceso local. No requiere conexión externa
+  salvo para la primera instalación de librerías.
+
+
+CONTACTO
+========
+Víctor Viana Atilano
+[email/teléfono si procede]
